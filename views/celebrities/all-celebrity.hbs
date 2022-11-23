@@ -1,0 +1,12 @@
+<h1> Celebrities !</h1>
+<div>
+  {{#each celebrities}}
+
+    <h3> {{name}}</h3>
+    <p> {{occupation}} </p>
+    <a href="/celebrities/{{_id}}">See details</a>
+    {{!-- <a href="/books/{{_id}}/edit">Edit</a> --}}
+
+  {{/each}}
+
+</div>
