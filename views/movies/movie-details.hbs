@@ -1,16 +1,23 @@
-<h1> Movies !</h1>
+{{!-- <h1> Movies !</h1>
 <h3> Title : {{title}}</h3>
 <p> Genre : {{genre}} </p>
 <p>Plot:{{plot}}</p>
-{{#each cast}}
+{{#each cast[0]}}
   <div>
     <p>{{name}}</p>
     <p>{{occupation}}</p>
     <p> {{catchphrase}}</p>
   </div>
-{{/each}}
+{{/each}} --}}
 
-<a href="/allmovies/{{id}}/edit">Edit Movie</a>
-<form action="/allmovies/{{id}}/delete" method="post">
+<p>title {{movie.title}}</p>
+ <p>genre {{movie.genre}}</p> 
+ <p>plot {{movie.plot}}</p> 
+ {{#each movie.cast}}
+ <p>cast {{name}}  Occupation {{occupation}}  catchphrase {{catchPhrase}}</p> 
+ {{/each}}
+
+<a href="/allmovies/{{movie._id}}/edit">Edit Movie</a>
+<form action="/allmovies/{{movie._id}}/delete" method="post">
     <button type="submit">Delete Movie</button>
 </form>
